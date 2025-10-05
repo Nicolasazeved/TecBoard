@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/FaviconD.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <title>TecBoard</title>
+</head>
+
+<body>
+    <header class="cabecalho">
+        <img id="logo-img" src="assets/logoBranco.png" alt="Logo da tecboard na cor branca">
+        <button id="toggle-mode" style="background: none; border: none; cursor: pointer;">
+            <img id="mode-icon" src="assets/light_mode.png" alt="Alternar modo" width="40" height="40">
+        </button>
+    </header>
+    <main>
+        <section class="conteudo">
+            <h1 class="titulo">
+                <h1>
+                    <span class="h1-top">Fique de olho</span><br>
+                    <span class="h1-bottom">no que importa</span>
+                </h1>
+            </h1>
+            <p class="texto">Monitoramento em tempo real com alertas inteligentes para sua aplicação nunca sair do ar
+                sem você saber.
+            </p>
+            <a class="link" href="#">Testar versão demo</a>
+            <img class="imagem" src="assets/celulardesk.png" alt="foto de 2 celulares">
+        </section>
+    </main>
+
+    <footer>
+        <div>2025 Desenvolvido por NicolasAzeved | Projeto fictício sem
+            fins
+            comerciais.</div>
+    </footer>
+
+    <script>
+        const btn = document.getElementById('toggle-mode');
+        const logo = document.getElementById('logo-img');
+        const icon = document.getElementById('mode-icon');
+
+        btn.addEventListener('click', () => {
+            document.body.classList.toggle('light-mode');
+            const isLight = document.body.classList.contains('light-mode');
+            logo.src = isLight ? 'assets/logo.png' : 'assets/logoBranco.png';
+            icon.src = isLight ? 'assets/darkmode.png' : 'assets/light_mode.png';
+        });
+    </script>
+</body>
+
+</html>
